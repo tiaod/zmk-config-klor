@@ -70,10 +70,10 @@
 
         number_symble {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &kp N1             &kp N2              &kp N3                      &kp N4                            &kp N5                             &kp N6     &kp N7            &kp N8           &kp N9                     &kp N0
+&trans  &mt LEFT_WIN PLUS  &mt LEFT_ALT COLON  &mt LCTRL LEFT_PARENTHESIS  &mt RIGHT_PARENTHESIS LEFT_SHIFT  &kp QUESTION                       &kp MINUS  &mt RSHIFT EQUAL  &mt RCTRL SLASH  &mt RALT NON_US_BACKSLASH  &mt RWIN SEMICOLON  &trans
+&trans  &kp PIPE           &kp UNDERSCORE      &kp LEFT_BRACE              &kp RIGHT_BRACE                   &kp DOUBLE_QUOTES  &trans  &trans  &kp APOS   &kp LBKT          &kp RBKT         &kp PERIOD                 &kp GRAVE           &trans
+                                               &trans                      &trans                            &trans             &trans  &trans  &trans     &trans            &trans
             >;
         };
 
