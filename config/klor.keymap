@@ -13,7 +13,10 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define BASE   0
 #define LOWER  1
@@ -79,37 +82,37 @@
 
         nav {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &kp PRINTSCREEN  &kp PG_UP  &kp UP_ARROW  &kp PG_DN  &kp K_CALC                  &trans  &trans           &trans     &trans    &trans
+&trans  &kp CAPSLOCK     &kp LEFT   &kp DOWN      &kp RIGHT  &kp INSERT                  &trans  &kp RIGHT_SHIFT  &kp RCTRL  &kp RALT  &kp RWIN  &trans
+&trans  &trans           &kp HOME   &kp C_MENU    &kp END    &trans      &trans  &trans  &trans  &trans           &trans     &trans    &trans    &trans
+                                    &trans        &trans     &trans      &trans  &trans  &trans  &trans           &trans
             >;
         };
 
         media {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp C_VOL_DN  &kp C_VOL_UP  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         function {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans    &trans        &trans     &trans      &trans                  &kp SLCK         &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LSHIFT  &trans                  &kp PAUSE_BREAK  &kp F5  &kp F6   &kp F7   &kp F8   &trans
+&trans  &trans    &trans        &trans     &trans      &trans  &trans  &trans  &kp PRINTSCREEN  &kp F1  &kp F2   &kp F3   &kp F4   &trans
+                                &trans     &trans      &trans  &trans  &trans  &trans           &trans  &trans
             >;
         };
 
         system {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans  &trans            &trans             &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans                        &trans  &ext_power EP_ON  &ext_power EP_OFF  &trans  &trans  &trans
+&out OUT_USB  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans            &trans             &trans  &trans  &out OUT_BLE
+                                          &trans        &trans        &trans        &trans  &trans  &trans  &trans            &trans
             >;
         };
 
