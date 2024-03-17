@@ -17,6 +17,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/rgb.h>
 
 #define BASE   0
 #define LOWER  1
@@ -62,10 +63,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-           &kp Q  &kp W  &kp E      &kp R        &kp T                              &kp Y          &kp U        &kp I         &kp O    &kp P
-&kp TAB    &kp A  &kp S  &kp D      &kp F        &kp G                              &kp H          &kp J        &kp K         &kp L    &kp ENTER  &kp BSPC
-&kp LSHFT  &kp Z  &kp X  &kp C      &kp V        &kp B      &kp C_MUTE  &kp C_MUTE  &kp N          &kp M        &kp COMMA     &kp DOT  &kp FSLH   &kp RSHFT
-                         &lt 3 ESC  &lt 1 SPACE  &lt 2 TAB  &trans      &trans      &kp BACKSPACE  &lt 1 SPACE  &lt 4 DELETE
+           &kp Q       &kp W       &kp E        &kp R         &kp T                              &kp Y          &kp U         &kp I         &kp O       &kp P
+&kp TAB    &mt LWIN A  &mt LALT S  &mt LCTRL D  &mt LSHIFT F  &kp G                              &kp H          &mt RSHIFT J  &mt RCTRL K   &mt RALT L  &mt RWIN ENTER  &kp BSPC
+&kp LSHFT  &kp Z       &kp X       &kp C        &kp V         &kp B      &kp C_MUTE  &kp C_MUTE  &kp N          &kp M         &kp COMMA     &kp DOT     &kp FSLH        &kp RSHFT
+                                   &lt 3 ESC    &lt 1 SPACE   &lt 2 TAB  &trans      &trans      &kp BACKSPACE  &lt 1 SPACE   &lt 4 DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -94,7 +95,7 @@
         &trans  &trans  &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &kp C_VOL_DN  &kp C_VOL_UP  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans        &trans        &tog 5  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -111,7 +112,7 @@
             bindings = <
               &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans  &trans            &trans             &trans  &trans
 &trans        &trans        &trans        &trans        &trans        &trans                        &trans  &ext_power EP_ON  &ext_power EP_OFF  &trans  &trans  &trans
-&out OUT_USB  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans            &trans             &trans  &trans  &out OUT_BLE
+&out OUT_USB  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &rgb_ug RGB_TOG   &rgb_ug RGB_EFF    &trans  &trans  &out OUT_BLE
                                           &trans        &trans        &trans        &trans  &trans  &trans  &trans            &trans
             >;
         };
