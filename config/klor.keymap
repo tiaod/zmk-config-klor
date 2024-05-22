@@ -109,10 +109,19 @@
 
         system {
             bindings = <
-              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans  &rgb_ug RGB_BRI   &rgb_ug RGB_BRD    &trans  &trans
-&trans        &trans        &trans        &trans        &trans        &bt BT_CLR                    &trans  &ext_power EP_ON  &ext_power EP_OFF  &trans  &trans  &trans
-&out OUT_USB  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &rgb_ug RGB_TOG   &rgb_ug RGB_EFF    &trans  &trans  &out OUT_BLE
-                                          &trans        &trans        &trans        &trans  &trans  &trans  &trans            &trans
+              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &rgb_ug RGB_BRI   &rgb_ug RGB_BRD    &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &bt BT_CLR                      &trans  &ext_power EP_ON  &ext_power EP_OFF  &trans  &trans  &trans
+&out OUT_USB  &trans        &trans        &trans        &trans        &bt BT_CLR_ALL  &trans  &trans  &trans  &rgb_ug RGB_TOG   &rgb_ug RGB_EFF    &trans  &trans  &out OUT_BLE
+                                          &trans        &trans        &trans          &trans  &trans  &trans  &trans            &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
