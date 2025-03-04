@@ -13,16 +13,13 @@
 #define TVP2 5
 
 &mt {
-    quick-tap-ms = <100>;
-    global-quick-tap;
     flavor = "tap-preferred";
     tapping-term-ms = <170>;
 };
 
 &lt {
-    tapping-term-ms = <240>;
-    flavor = "balanced";
-    quick-tap-ms = <150>;
+    tapping-term-ms = <150>;
+    flavor = "tap-preferred";
 };
 
 &caps_word {
@@ -32,15 +29,10 @@
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
             #binding-cells = <2>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
         };
     };
     keymap {
