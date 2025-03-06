@@ -33,6 +33,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 29 30 31 32 33 34 35 40 41 42 43>;
         };
 
@@ -42,7 +43,8 @@
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 28 36 37 38 39>;            
+
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 28 36 37 38 39>;
         };
     };
 
@@ -52,10 +54,10 @@
         base_layer {
             label = "BASE";
             bindings = <
-                &kp Q       &kp W       &kp E         &kp R        &kp T                              &kp Y          &kp U        &kp I         &kp O       &kp P
-&kp TAB         &lh_pht LGUI A  &lh_pht LALT S  &lh_pht LCTRL D   &lh_pht LSHFT F  &kp G                              &kp H          &rh_pht RSHFT J  &rh_pht RCTRL K   &rh_pht RALT L  &rh_pht RGUI ENTER  &kp ENTER
-&kp LEFT_SHIFT  &kp Z       &kp X       &kp C         &kp V        &kp B      &kp C_MUTE  &kp C_MUTE  &kp N          &kp M        &kp COMMA     &kp DOT     &kp LEFT_SHIFT  &kp RSHIFT
-                                        &lt 3 ESCAPE  &lt 1 SPACE  &lt 2 TAB  &kp TAB     &trans      &kp BACKSPACE  &lt 1 SPACE  &lt 4 DELETE
+                &kp Q           &kp W           &kp E            &kp R            &kp T                              &kp Y          &kp U            &kp I            &kp O           &kp P
+&kp TAB         &lh_pht LGUI A  &lh_pht LALT S  &lh_pht LCTRL D  &lh_pht LSHFT F  &kp G                              &kp H          &rh_pht RSHFT J  &rh_pht RCTRL K  &rh_pht RALT L  &rh_pht RGUI ENTER  &kp ENTER
+&kp LEFT_SHIFT  &kp Z           &kp X           &kp C            &kp V            &kp B      &kp C_MUTE  &kp C_MUTE  &kp N          &kp M            &kp COMMA        &kp DOT         &kp LEFT_SHIFT      &kp RSHIFT
+                                                &lt 3 ESCAPE     &lt 1 SPACE      &lt 2 TAB  &kp TAB     &trans      &kp BACKSPACE  &lt 1 SPACE      &lt 4 DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -63,11 +65,12 @@
 
         number_symble {
             bindings = <
-        &kp NUMBER_1   &kp NUMBER_2    &kp NUMBER_3                &kp NUMBER_4                      &kp NUMBER_5                       &kp NUMBER_6      &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9        &kp NUMBER_0
-&trans  &lh_pht LWIN PLUS  &lh_pht LALT COLON  &lh_pht LCTRL LEFT_PARENTHESIS  &lh_pht LEFT_SHIFT RIGHT_PARENTHESIS  &kp QUESTION                       &kp MINUS         &rh_pht RSHFT EQUAL   &rh_pht RCTRL SLASH    &rh_pht RALT BACKSLASH  &rh_pht RGUI SEMICOLON  &trans
-&trans  &kp PIPE       &kp UNDERSCORE  &kp LEFT_BRACE              &kp RIGHT_BRACE                   &kp DOUBLE_QUOTES  &trans  &trans  &kp SINGLE_QUOTE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans              &kp GRAVE           &trans
-                                       &trans                      &trans                            &trans             &trans  &trans  &trans            &trans            &trans
+        &kp NUMBER_1       &kp NUMBER_2        &kp NUMBER_3                    &kp NUMBER_4                          &kp NUMBER_5                       &kp NUMBER_6      &kp NUMBER_7         &kp NUMBER_8         &kp NUMBER_9            &kp NUMBER_0
+&trans  &lh_pht LWIN PLUS  &lh_pht LALT COLON  &lh_pht LCTRL LEFT_PARENTHESIS  &lh_pht LEFT_SHIFT RIGHT_PARENTHESIS  &kp QUESTION                       &kp MINUS         &rh_pht RSHFT EQUAL  &rh_pht RCTRL SLASH  &rh_pht RALT BACKSLASH  &rh_pht RGUI SEMICOLON  &trans
+&trans  &kp PIPE           &kp UNDERSCORE      &kp LEFT_BRACE                  &kp RIGHT_BRACE                       &kp DOUBLE_QUOTES  &trans  &trans  &kp SINGLE_QUOTE  &kp LEFT_BRACKET     &kp RIGHT_BRACKET    &trans                  &kp GRAVE               &trans
+                                               &trans                          &trans                                &trans             &trans  &trans  &trans            &trans               &trans
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
@@ -78,16 +81,18 @@
 &trans  &trans           &kp HOME   &trans    &kp END    &trans      &trans  &trans  &trans  &trans     &trans     &trans    &trans    &trans
                                     &trans    &trans     &trans      &trans  &trans  &trans  &trans     &trans
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         media {
             bindings = <
-        &trans  &trans  &rgb_ug RGB_TOG  &ext_power EP_ON   &ext_power EP_OFF                  &trans           &trans             &trans      &trans  &trans
-&trans  &trans  &trans  &trans           &kp C_VOLUME_DOWN  &kp C_VOLUME_UP                    &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &trans      &trans  &trans  &trans
-&trans  &trans  &trans  &trans           &trans             &trans             &trans  &trans  &trans           &trans             &trans      &trans  &trans  &trans
-                        &trans           &trans             &mo 5              &trans  &trans  &kp C_STOP       &kp C_PLAY_PAUSE   &kp K_MUTE
+                 &rgb_ug RGB_ON   &rgb_ug RGB_OFF  &rgb_ug RGB_TOG  &ext_power EP_ON   &ext_power EP_OFF                  &trans           &trans             &trans      &trans  &trans
+&rgb_ug RGB_SPI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP                    &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &trans      &trans  &trans  &trans
+&rgb_ug RGB_SPD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_EFF    &rgb_ug RGB_EFR    &trans  &trans  &trans           &trans             &trans      &trans  &trans  &trans
+                                                   &trans           &trans             &mo 5              &trans  &trans  &kp C_STOP       &kp C_PLAY_PAUSE   &kp K_MUTE
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
@@ -98,6 +103,7 @@
 &trans  &trans  &trans     &trans     &trans    &trans    &trans  &trans  &kp C_MENU       &kp F1  &kp F2   &kp F3   &kp F4   &trans
                            &trans     &trans    &trans    &trans  &trans  &trans           &trans  &trans
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
@@ -108,7 +114,17 @@
 &out OUT_USB  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans       &trans  &trans  &trans  &trans  &out OUT_BLE
                                           &trans        &trans        &trans        &trans  &trans  &bootloader  &trans  &trans
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        layer_6 {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
