@@ -26,16 +26,6 @@ if SHIELD_KLOR_DONGLE
 endif
 
 
-if SHIELD_KLOR_LEFT
-
-    config ZMK_KEYBOARD_NAME
-        default "KLOR"
-
-    config ZMK_SPLIT_BLE_ROLE_CENTRAL
-        default y
-
-endif # LEFT
-
 
 
 if SHIELD_KLOR_LEFT || SHIELD_KLOR_RIGHT

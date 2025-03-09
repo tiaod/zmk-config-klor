@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "profile_status.h": "c",
+        "battery_status.h": "c"
+    }
+}
