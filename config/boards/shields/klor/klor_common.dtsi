@@ -24,7 +24,6 @@
 		compatible = "alps,ec11";
 		label = "LEFT_ENCODER";
 		resolution = <4>;
-		wakeup-source;
 		status = "okay";
 	};
 
@@ -32,7 +31,6 @@
 		compatible = "alps,ec11";
 		label = "RIGHT_ENCODER";
 		resolution = <4>;
-		wakeup-source;
 		status = "okay";
 	};
 
